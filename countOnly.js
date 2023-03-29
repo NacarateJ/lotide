@@ -9,15 +9,15 @@
 // arr = [a, a, b, c, d, e, a]
 
 // object = {
-  // a: true, 
-  // d: true,
-  // b: false,
-  // f:true
+// a: true,
+// d: true,
+// b: false,
+// f:true
 // }
 
 // expected result = {
-  // a:3, 
-  // d:1
+// a:3,
+// d:1
 // }
 
 // only keys which have a truthy value should be counted in the resulting object.
@@ -26,7 +26,7 @@
 // array (like "f" in the example above), it also does not have to be included in the final count.
 
 
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -57,7 +57,7 @@ const countOnly = function(allItems, itemsToCount) {
     }
   }
   return results;
-}
+};
 
 const firstNames = [
   "Karl",
