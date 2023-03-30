@@ -22,15 +22,17 @@ const countLetters = function(string) {
     if (letter === " ") {
       continue;
     }
-    // if the result obj already has the letter, 1 is added to the value of that property (letter)
+   // if the result obj already has the letter, 1 is added to the value of that property (letter)
     if (result[letter]) {
       result[letter] += 1;
     } else {
       // if the letter is not in the result obj yet,
       // a new property is added to the results obj (the current letter and a value of 1)
-      result[letter] = 1;
+      result[letter] = 1; 
     }
   }
+  // short option of the if statement
+  // result[letter] ? (result[letter] += 1) : (result[letter] = 1); 
 
   return result;
 }
