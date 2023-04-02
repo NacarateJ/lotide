@@ -14,14 +14,14 @@ const assertEqual = function(actual, expected) {
 const findKeyByValue = function(objectToSearch, targetValue) {
   // Iterate over the keys of the object using a for...of loop
   // Object.keys() returns an array of the object's keys(the property names)
-  for (let key of Object.keys(objectToSearch)) {
+  for (let objKey of Object.keys(objectToSearch)) {
     // Check if the value associated with the current key is equal to the target value
 
-    // using objectToSearch[key] evaluates the key variable to get the name of the property,
+    // using objectToSearch[key] evaluates the objKey variable to get the name of the property,
     // and uses that name to access the corresponding value in the objectToSearch object.
-    if (objectToSearch[key] === targetValue) {
+    if (objectToSearch[objKey] === targetValue) {
       // If the value matches, return the current key
-      return key;
+      return objKey;
     }
   }
   // If no matching key is found, return undefined
