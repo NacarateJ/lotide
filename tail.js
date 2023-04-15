@@ -6,9 +6,3 @@ const tail = (array) => {
 
 module.exports = tail;
 
-console.log(tail([5, 6, 7]));
-console.log(tail(["Hello", "Lighthouse", "Labs"]));
-console.log(tail([7]));
-console.log(tail([]));
-
-
