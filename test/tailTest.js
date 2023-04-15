@@ -1,46 +1,20 @@
-const assertEqual = require("../assertEqual");
+const assert = require("chai").assert;
 const tail = require("../tail");
 
 
-// TEST TO CHECK THE NEM ARRAY IS EXCLUDING THE HEAD (i[0]) OF THE ARRAY
+describe("#tail", () => {
+  it("returns '6, 7' for [5, 6, 7]", () => {
+    assert.deepEqual(tail([5, 6, 7]), '6, 7');
+  });
+  it("returns 'Lighthouse, Labs' for ['Hello', 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(['Hello', 'Lighthouse', 'Labs']), 'Lighthouse, Labs');
+  });
+  it("returns '' for [7]", () => {
+    assert.deepEqual(tail([7]), '');
+  });
+  it("returns '' for []", () => {
+    assert.deepEqual(tail([]), '');
+  });
+});
 
-// assertEqual(tail([5, 6, 7]), "6,7");
-// assertEqual(tail(["Hello", "Lighthouse", "Labs"]), "Lighthouse,Labs");
-// assertEqual(tail([7]), "");
-// assertEqual(tail([]), "");
 
-// COMPASS TEST SUGESTION TO CHECK THE NEM ARRAY IS EXCLUDING THE HEAD (i[0]) OF THE ARRAY
-
-// Our assertEqual function is too simple to compare array values.
-// JavaScript doesn't allow the use of === or == to compare two arrays.
-
-// Instead of comparing arrays, a workaround to this limitation could be to
-// compare the values of the returned tail array directly, like this:
-
-// TEST TO CHECK THE NEM ARRAY IS EXCLUDING THE HEAD (i[0]) OF THE ARRAY
-
-// const result = tail(["Hello", "Lighthouse", "Labs"]);
-// assertEqual(result.length, 2);
-// assertEqual(result[0], "Lighthouse");
-// assertEqual(result[1], "Labs");
-
-// const result = tail([5, 6, 7]);
-// assertEqual(result.length, 2);
-// assertEqual(result[0], 6);
-// assertEqual(result[1], 7);
-
-// const result = tail([7]);
-// assertEqual(result.length, 0);
-
-// const result = tail([]);
-// assertEqual(result.length, 0);
-
-// TEST CODE TO CHECK IF THE ORIGINAL ARRAY IS NOT BEING MODIFIED
-
-const original = [5, 6, 7];
-// const original = ["Hello", "Lighthouse", "Labs"];
-// const original = [7];
-// const original = [];
-
-tail(original);
-assertEqual(original.length, 3);
